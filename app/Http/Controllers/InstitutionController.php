@@ -14,7 +14,7 @@ class InstitutionController extends Controller
      */
     public function index()
     {
-        return view('institutions.app');
+        return view('institutions.layouts.app');
     }
 
     /**

@@ -35,7 +35,7 @@
         <div class="content">
             <div class="container-fluid">
 
-                {{--yield page item here--}}
+             @yield('content')   {{--yield page item here--}}
 
             </div>
 
