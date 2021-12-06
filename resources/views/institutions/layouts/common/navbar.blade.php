@@ -16,8 +16,8 @@
                 </li>
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="nc-icon nc-planet"></i>
-                        <span class="notification">5</span>
+                        <i class="nc-icon nc-alien-33"></i>
+{{--                        <span class="notification">5</span>--}}
                         <span class="d-lg-none">Notification</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -28,12 +28,7 @@
                         <a class="dropdown-item" href="#">Another notification</a>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nc-icon nc-zoom-split"></i>
-                        <span class="d-lg-block">&nbsp;Search</span>
-                    </a>
-                </li>
+
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
