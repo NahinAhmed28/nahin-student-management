@@ -12,33 +12,41 @@ Tip 2: you can also add an image using data-image tag
         </div>
         <ul class="nav">
             <li>
-                <a class="nav-link" href="dashboard.html">
+                <a class="nav-link" href="{{route(('institution.index'))}}">
                     <i class="nc-icon nc-chart-pie-35"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
             <li>
-                <a class="nav-link" href="./user.html">
+                <a class="nav-link" href="{{route('institution.user')}}">
                     <i class="nc-icon nc-circle-09"></i>
                     <p>User Profile</p>
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="./table.html">
+                <a class="nav-link" href="{{route('enrollment.index')}}">
                     <i class="nc-icon nc-notes"></i>
-                    <p>Application List</p>
+                    <p>Enrollment List</p>
                 </a>
             </li>
+
             <li>
-                <a class="nav-link" href="./typography.html">
+                <a class="nav-link" href="{{route('course.index')}}">
                     <i class="nc-icon nc-paper-2"></i>
                     <p>Manage Course</p>
                 </a>
             </li>
+
             <li>
-                <a class="nav-link" href="./icons.html">
+                <a class="nav-link" href="{{route('discipline.index')}}">
                     <i class="nc-icon nc-atom"></i>
-                    <p>Icons</p>
+                    <p> Course Discipline</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{route('institution.list')}}">
+                    <i class="nc-icon nc-bullet-list-67"></i>
+                    <p>Institution List</p>
                 </a>
             </li>
 

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Discipline extends Model
 {
+    protected $guarded = ['id'];
     use HasFactory;
 
     public function courses():HasMany

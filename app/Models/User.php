@@ -12,6 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+
     protected $guarded = ['id'];
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -49,7 +50,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
-    public function institutions(): BelongsTo
+    public function institution(): BelongsTo
     {
         return $this->belongsTo(Institution::class);
     }

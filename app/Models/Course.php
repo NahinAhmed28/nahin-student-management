@@ -9,9 +9,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Course extends Model
 {
+    protected $guarded = ['id'];
     use HasFactory;
 
-    public function institutions(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function institution(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Institution::class);
     }

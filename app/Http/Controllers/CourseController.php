@@ -3,39 +3,77 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Discipline;
+use App\Models\Institution;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
+    public $courseModel;
+    public $instituteModel;
+    public $disciplineModel;
+    public function __construct(Course $course, Institution $institute,Discipline $discipline)
+    {
+        $this->courseModel= $course;
+        $this->instituteModel= $institute;
+        $this->disciplineModel= $discipline;
+    }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $data = [
+            'courses' => $this->courseModel->get(),
+        ];
+
+//        dd($data);
+
+        return view('institutions.course.index',$data);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        $data = [
+        'courses' => $this->courseModel->get(),
+        'institutions' => $this->instituteModel->get(),
+        'disciplines' => $this->disciplineModel->get(),
+        ];
+        return view('institutions.course.create',$data);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+        $value= $this->courseModel->create([
+            'name'=> $request->name,
+            'description' =>$request->description,
+            'price' =>$request->description,
+            'credit' =>$request->credit,
+            'institution_id' =>$request->institution_id,
+
+        ]);
+
+        if ($value)
+        {
+            return redirect()->route('course.index');
+        }
+        else {
+            return redirect()->route('course.create');
+
+        }
     }
 
     /**

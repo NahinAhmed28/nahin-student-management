@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->foreignId('institution_id')->constrained();
             $table->string('description');
             $table->string('price');
+            $table->string('credit');
             $table->timestamps();
             $table->softDeletes();
         });

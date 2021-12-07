@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Enrollment extends Model
 {
+    protected $guarded = ['id'];
     use HasFactory;
 
-    public function users(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(User::class);
     }
