@@ -40,7 +40,7 @@ Tip 2: you can also add an image using data-image tag
             <li>
                 <a class="nav-link" href="{{route('discipline.index')}}">
                     <i class="nc-icon nc-atom"></i>
-                    <p> Course Discipline</p>
+                    <p> Course Disciplines</p>
                 </a>
             </li>
             <li class="nav-item ">
@@ -51,7 +51,7 @@ Tip 2: you can also add an image using data-image tag
             </li>
 
             <li>
-                <a class="nav-link" href="./notifications.html">
+                <a class="nav-link" href="{{route('institution.notification')}}">
                     <i class="nc-icon nc-bell-55"></i>
                     <p>Notifications</p>
                 </a>

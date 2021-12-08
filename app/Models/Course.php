@@ -16,9 +16,9 @@ class Course extends Model
     {
         return $this->belongsTo(Institution::class);
     }
-    public function disciplines():HasMany
+    public function disciplines():BelongsToMany
     {
-        return $this->hasMany(Discipline::class);
+        return $this->belongsToMany(Discipline::class);
     }
 
 }

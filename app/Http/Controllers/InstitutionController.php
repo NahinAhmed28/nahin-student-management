@@ -69,16 +69,26 @@ class InstitutionController extends Controller
     {
        //
     }
+
+
     public function list()
     {
         $institutions = $this->instituteModel->get();
         return view('institutions.lists.index', compact('institutions'));
     }
+
+
     public function user()
     {
-
         return view('institutions.user');
     }
+
+    public function notification()
+    {
+        return view('institutions.notifications.notification');
+    }
+
+
 
     /**
      * Show the form for editing the specified resource.

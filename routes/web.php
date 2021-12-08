@@ -27,6 +27,7 @@ Route::resource('discipline', DisciplineController::class);
 Route::resource('enrollment', EnrollmentController::class);
 Route::get('/institute/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
 Route::get('/institute/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
+Route::get('/institute/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
 
 
 
