@@ -16,6 +16,8 @@
     <link href="{{asset('backend/assets/css/light-bootstrap-dashboard.css?v=2.0.0 ')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{asset('backend/assets/css/demo.css')}}" rel="stylesheet" />
+{{--multiselect--}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 
 </head>
@@ -134,14 +136,11 @@
 <script src="{{asset('backend/assets/js/light-bootstrap-dashboard.js?v=2.0.0 ')}}" type="text/javascript"></script>
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{asset('backend/assets/js/demo.js')}}"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
 
-        demo.showNotification();
 
-    });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+@stack('scripts')
+
+
 
 </html>

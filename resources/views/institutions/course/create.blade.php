@@ -37,8 +37,8 @@
         <div class="form-row">
             <div class="col-md-6 mb-3">
                 <label for="discipline">Select Discipline</label>
-                <select class="form-control " id="choices-multiple-remove-button" name="disciplines[]" multiple>
-{{--                    <select class="selectpicker" name="disciplines[]" multiple aria-label="size 3 select example">--}}
+                <select class="form-control js-example-basic-multiple"  id="discipline" name="disciplines[]" multiple="multiple">
+
                     @foreach($disciplines as $discipline)
                         <option value="{{$discipline->id}}">{{$discipline->name}}</option>
                     @endforeach
@@ -65,21 +65,12 @@
 
 @endsection
 
-@once
-{{--    <script>--}}
-{{--        $('select').selectpicker();--}}
-{{--        $(document).ready(function(){--}}
-
-{{--            var multipleCancelButton = new Choices('#choices-multiple-remove-button', {--}}
-{{--                removeItemButton: true,--}}
-{{--                maxItemCount:5,--}}
-{{--                searchResultLimit:5,--}}
-{{--                renderChoiceLimit:5--}}
-{{--            });--}}
-
-
-{{--        });--}}
-{{--    </script>--}}
-@endonce
-
+@push('scripts')
+    <script>
+        // In your Javascript (external .js resource or <script> tag)
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
+@endpush
 
