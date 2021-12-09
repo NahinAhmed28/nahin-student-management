@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\Discipline;
 use App\Models\Institution;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
@@ -26,7 +27,7 @@ class CourseController extends Controller
     public function index()
     {
         $data = [
-            'courses' => $this->courseModel->get(),
+            'courses' => $this->courseModel->with('disciplines')->get(),
         ];
 
 //        dd($data);
@@ -57,6 +58,9 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+
+        DB::beginTransaction();
+
         $value= $this->courseModel->create([
             'name'=> $request->name,
             'description' =>$request->description,
@@ -66,12 +70,15 @@ class CourseController extends Controller
 
         ]);
 
+        $value->disciplines()->attach($request->disciplines);
+        DB::commit();
+
         if ($value)
         {
-            return redirect()->route('course.index');
+            return redirect()->route('course.create');
         }
         else {
-            return redirect()->route('course.create');
+            return redirect()->route('course.index');
 
         }
     }

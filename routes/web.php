@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InstitutionController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DisciplineController;
 use App\Http\Controllers\EnrollmentController;
@@ -28,6 +29,8 @@ Route::resource('enrollment', EnrollmentController::class);
 Route::get('/institute/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
 Route::get('/institute/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
 Route::get('/institute/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
+
+Route::resource('student', StudentController::class);
 
 
 

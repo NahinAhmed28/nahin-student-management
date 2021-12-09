@@ -7,7 +7,6 @@
     </div>
     <h4> Course List</h4>
 
-
     <div class="card-body table-full-width table-responsive">
         <table class="table table-hover table-striped">
             <thead class="badge-dark">
@@ -17,7 +16,7 @@
             <th>Price</th>
             <th>Credit</th>
             <th>Institution</th>
-            {{--            <th>Discipline</th>--}}
+            <th>Disciplines</th>
             </thead>
             <tbody>
 
@@ -29,10 +28,13 @@
                 <td>{{$course->price}}</td>
                 <td>{{$course->credit}}</td>
                 <td>{{$course->institution->name}}</td>
-                {{--                <td>{{$course->disciplines->name}}</td>--}}
+                <td>
+                    @foreach($courses as $course)
+                       {{$course->disciplines->pluck('name')->implode(',')}}
+                    @endforeach
+                </td>
             </tr>
             @endforeach
-
             </tbody>
         </table>
     </div>
