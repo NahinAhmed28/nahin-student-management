@@ -20,6 +20,7 @@ class CreateCoursesTable extends Migration
             $table->string('description');
             $table->string('price');
             $table->string('credit');
+            $table->unsignedBigInteger('status')->comment('1=Actve,2=Inactive')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

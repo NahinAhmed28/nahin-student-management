@@ -16,6 +16,7 @@ class CreateDisciplinesTable extends Migration
         Schema::create('disciplines', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger('status')->comment('1=Actve,2=Inactive')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

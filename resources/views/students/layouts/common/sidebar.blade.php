@@ -40,24 +40,24 @@
                         Dashboard Example 1
                     </a>
                 </li>
-                <li class="app-sidebar__heading">UI Components</li>
+                <li class="app-sidebar__heading">Courses</li>
                 <li>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-diamond"></i>
-                        Elements
+                        List of Available Courses
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
                         <li>
                             <a href="elements-buttons-standard.html">
                                 <i class="metismenu-icon"></i>
-                                Buttons
+                                List of Available Disciplines
                             </a>
                         </li>
                         <li>
                             <a href="elements-dropdowns.html">
                                 <i class="metismenu-icon">
-                                </i>Dropdowns
+                                </i>List of Available institutions
                             </a>
                         </li>
                         <li>
@@ -179,7 +179,7 @@
                         Tables
                     </a>
                 </li>
-                <li class="app-sidebar__heading">Widgets</li>
+                <li class="app-sidebar__heading">Enrollment</li>
                 <li>
                     <a href="dashboard-boxes.html" class="mm-active">
                         <i class="metismenu-icon pe-7s-display2"></i>
