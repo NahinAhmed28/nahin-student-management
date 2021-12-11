@@ -34,6 +34,16 @@ class CourseController extends Controller
 
         return view('institutions.course.index',$data);
     }
+ public function stuIndex()
+    {
+        $data = [
+            'courses' => $this->courseModel->with('disciplines')->get(),
+        ];
+
+//        dd($data);
+
+        return view('students.courses.index',$data);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -49,6 +59,10 @@ class CourseController extends Controller
         ];
         return view('institutions.course.create',$data);
     }
+
+
+
+
 
     /**
      * Store a newly created resource in storage.

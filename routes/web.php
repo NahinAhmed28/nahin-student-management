@@ -34,6 +34,11 @@ Route::resource('student', StudentController::class);
 
 
 
+Route::get('/students/courses' ,  [CourseController::class, 'stuIndex'])->name('student.course');
+Route::get('/students/institutions' ,  [InstitutionController::class, 'stuIndex'])->name('student.institution');
+Route::get('/students/disciplines' ,  [DisciplineController::class, 'stuIndex'])->name('student.discipline');
+Route::get('/students/enrollment' ,  [EnrollmentController::class, 'stuIndex'])->name('student.enrollment');
+
 
 
 

@@ -21,6 +21,10 @@ class InstitutionController extends Controller
     {
         return view('institutions.index');
     }
+ public function stuIndex()
+    {
+        return view('students.index');
+    }
 
 
 

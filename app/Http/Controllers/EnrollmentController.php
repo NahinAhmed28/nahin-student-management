@@ -16,6 +16,10 @@ class EnrollmentController extends Controller
     {
         return view('institutions.enrollments.index');
     }
+ public function stuIndex()
+    {
+        return view('students.enrollments.index');
+    }
 
     /**
      * Show the form for creating a new resource.

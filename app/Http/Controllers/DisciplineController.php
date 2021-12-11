@@ -30,6 +30,16 @@ class DisciplineController extends Controller
 
         return view('institutions.discipline.index', $data);
     }
+    public function stuIndex()
+    {
+        $data = [
+            'disciplines' => $this->disciplineModel->get(),
+            'courses' => $this->courseModel->get()
+        ];
+
+
+        return view('students.disciplines.index', $data);
+    }
 
     /**
      * Show the form for creating a new resource.
