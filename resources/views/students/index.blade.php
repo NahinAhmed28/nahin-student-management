@@ -1,6 +1,7 @@
 @extends('students.layouts.app')
 
 @section('content')
+
                 <div class="app-main__inner">
                     <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
                         <li class="nav-item">
@@ -84,10 +85,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
 
 @endsection
 @push('scripts')

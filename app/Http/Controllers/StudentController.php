@@ -15,6 +15,10 @@ class StudentController extends Controller
     {
         return view('students.index');
     }
+ public function stuInfo()
+    {
+        return view('students.user');
+    }
 
     /**
      * Show the form for creating a new resource.
