@@ -23,7 +23,10 @@ class InstitutionController extends Controller
     }
  public function stuIndex()
     {
-        return view('students.index');
+
+
+        $institutions = $this->instituteModel->get();
+        return view('students.institutions.index', compact('institutions'));
     }
 
 

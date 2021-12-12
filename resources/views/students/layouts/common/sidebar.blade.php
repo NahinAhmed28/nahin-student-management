@@ -35,7 +35,7 @@
             <ul class="vertical-nav-menu">
                 <li class="app-sidebar__heading">Dashboards</li>
                 <li>
-                    <a href="index.html">
+                    <a href="{{route('student.index')}}">
                         <i class="metismenu-icon pe-7s-rocket"></i>
                         Dashboard
                     </a>
@@ -49,15 +49,15 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="elements-buttons-standard.html">
+                            <a href="{{route('student.course')}}">
                                 <i class="metismenu-icon"></i>
-                                List of Available Disciplines
+                                List of Available Courses (i)
                             </a>
                         </li>
                         <li>
                             <a href="elements-dropdowns.html">
                                 <i class="metismenu-icon">
-                                </i>List of Available institutions
+                                </i>List of Available Courses (ii)
                             </a>
                         </li>
 
@@ -72,30 +72,29 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="components-tabs.html">
+                            <a href="{{route('student.discipline')}}">
                                 <i class="metismenu-icon">
-                                </i>Tabs
+                                </i>Disciplines
                             </a>
                         </li>
-                        <li>
-                            <a href="components-accordions.html">
-                                <i class="metismenu-icon">
-                                </i>Accordions
-                            </a>
-                        </li>
-
-
                     </ul>
                 </li>
                 <li  >
-                    <a href="tables-regular.html">
+                    <a href="{{route('student.institution')}}">
                         <i class="metismenu-icon pe-7s-display2"></i>
                         List of Available institutions
                     </a>
                 </li>
                 <li class="app-sidebar__heading">Enrollment</li>
                 <li>
-                    <a href="dashboard-boxes.html" class="mm-active">
+                    <a href="{{route('student.enrollment')}}" class="mm-active">
+                        <i class="metismenu-icon pe-7s-display2"></i>
+                        Enrolled courses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('enrollment.create')}}" class="mm-active">
                         <i class="metismenu-icon pe-7s-display2"></i>
                         Enroll course
                     </a>
