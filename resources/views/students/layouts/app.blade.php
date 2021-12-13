@@ -27,6 +27,8 @@
     </div>
 
 
-<script type="text/javascript" src="{{asset('frontend/assets/scripts/main.js')}}"></script>
+
 </body>
+<script type="text/javascript" src="{{asset('frontend/assets/scripts/main.js')}}"></script>
+@stack('scripts')
 </html>

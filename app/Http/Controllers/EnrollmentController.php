@@ -14,11 +14,13 @@ class EnrollmentController extends Controller
     public $courseModel;
     public $instituteModel;
     public $disciplineModel;
-    public function __construct(Course $course, Institution $institute,Discipline $discipline)
+    public $enrollmentModel;
+    public function __construct(Course $course, Institution $institute,Discipline $discipline, Enrollment  $enrollment)
     {
         $this->courseModel= $course;
         $this->instituteModel= $institute;
         $this->disciplineModel= $discipline;
+        $this->enrollmentModel= $enrollment;
     }
     /**
      * Display a listing of the resource.
@@ -41,7 +43,13 @@ class EnrollmentController extends Controller
      */
     public function create()
     {
-        return view('students.enrollments.create');
+        $data =[
+            'institutions' => $this->instituteModel->get(),
+        'disciplines' => $this->disciplineModel->get(),
+        'courses' => $this->courseModel->get(),
+        ];
+
+        return view('students.enrollments.create', $data);
     }
 
     /**
@@ -55,16 +63,18 @@ class EnrollmentController extends Controller
 
         DB::beginTransaction();
 
-        $value= $this->courseModel->create([
-            'name'=> $request->name,
-            'description' =>$request->description,
-            'price' =>$request->description,
-            'credit' =>$request->credit,
-            'institution_id' =>$request->institution_id,
+        $value= $this->enrollmentModel->create([
+
+            'user_id'=> 1,
+            'course_id'=> $request->course_id
 
         ]);
 
-        $value->disciplines()->attach($request->disciplines);
+
+        $value->users()->attach($request->name);
+
+
+
         DB::commit();
 
         if ($value)

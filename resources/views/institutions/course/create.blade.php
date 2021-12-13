@@ -34,6 +34,8 @@
                 <input type="text" class="form-control" id="credit" name="credit" placeholder="Enter credit"  required>
             </div>
         </div>
+
+
         <div class="form-row">
             <div class="col-md-6 mb-3">
                 <label for="discipline">Select Discipline</label>

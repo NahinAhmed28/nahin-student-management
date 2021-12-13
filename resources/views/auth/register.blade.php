@@ -39,6 +39,28 @@
                             </div>
                         </div>
 
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="device">Select Institution</label>
+                                <select class="form-control custom-select" id="inputGroupSelect03" name="institution_id">
+                                    <option selected>select...</option>
+                                    @foreach($institutions as $institute)
+                                        <option value="{{$institute->id}}">{{$institute->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="device">Role</label>
+                            <select class="custom-select" id="inputGroupSelect03" name="role_id">
+                                <option selected>Choose...</option>
+                                @foreach($roles as $role)
+                                    <option value="{{$role->id}}">{{$role->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

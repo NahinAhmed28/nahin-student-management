@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="elements-dropdowns.html">
+                            <a href="#">
                                 <i class="metismenu-icon">
                                 </i>List of Available Courses (ii)
                             </a>
@@ -96,7 +96,7 @@
                 <li>
                     <a href="{{route('enrollment.create')}}" class="mm-active">
                         <i class="metismenu-icon pe-7s-display2"></i>
-                        Enroll course
+                         Enroll for Courses
                     </a>
                 </li>
 
