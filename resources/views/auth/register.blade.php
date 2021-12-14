@@ -1,6 +1,6 @@
-@extends('institutions.layouts.app')
+@include('students.layouts.common.head')
+<body>
 
-@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -44,7 +44,7 @@
                                 <label for="device">Select Institution</label>
                                 <select class="form-control custom-select" id="inputGroupSelect03" name="institution_id">
                                     <option selected>select...</option>
-                                    @foreach($institutions as $institute)
+                                    @foreach($datas as $institute)
                                         <option value="{{$institute->id}}">{{$institute->name}}</option>
                                     @endforeach
                                 </select>
@@ -55,9 +55,9 @@
                             <label for="device">Role</label>
                             <select class="custom-select" id="inputGroupSelect03" name="role_id">
                                 <option selected>Choose...</option>
-                                @foreach($roles as $role)
-                                    <option value="{{$role->id}}">{{$role->name}}</option>
-                                @endforeach
+{{--                                @foreach($roles as $role)--}}
+{{--                                    <option value="{{$role->id}}">{{$role->name}}</option>--}}
+{{--                                @endforeach--}}
                             </select>
                         </div>
 
@@ -96,4 +96,5 @@
         </div>
     </div>
 </div>
-@endsection
+
+</body>

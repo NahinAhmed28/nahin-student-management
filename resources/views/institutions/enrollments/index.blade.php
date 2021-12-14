@@ -13,6 +13,7 @@
             <th>Course Name</th>
             <th>Course Credit</th>
             <th>Course Price</th>
+            <th>Institution</th>
             <th></th>
             <th></th>
             </thead>
