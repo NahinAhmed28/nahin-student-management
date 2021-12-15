@@ -27,17 +27,17 @@
             </div>
 
 
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="device">Select Institution</label>
-                    <select class="form-control custom-select" id="inputGroupSelect03" name="institution_id">
-                        <option selected>select...</option>
-                        @foreach($institutions as $institute)
-                            <option value="{{$institute->id}}">{{$institute->name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
+{{--            <div class="form-row">--}}
+{{--                <div class="col-md-6 mb-3">--}}
+{{--                    <label for="device">Select Institution</label>--}}
+{{--                    <select class="form-control custom-select" id="inputGroupSelect03" name="institution_id">--}}
+{{--                        <option selected>select...</option>--}}
+{{--                        @foreach($institutions as $institute)--}}
+{{--                            <option value="{{$institute->id}}">{{$institute->name}}</option>--}}
+{{--                        @endforeach--}}
+{{--                    </select>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
             <button class="btn btn-success" type="submit">Submit Info</button>
         </form>

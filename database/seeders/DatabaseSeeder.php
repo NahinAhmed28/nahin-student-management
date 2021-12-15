@@ -23,12 +23,48 @@ class DatabaseSeeder extends Seeder
         DB::table('roles')->insert([
             'title' => 'User'
         ]);
+        DB::table('institutions')->insert([
+            'name' => "shaheen",
+            'description' => 'abcd efg hij ',
+            'status' => '1',
+            'created_at'=>	now(),
+            'updated_at'=>now(),
+        ]);
+
+        DB::table('institutions')->insert([
+            'name' => "adamjee",
+            'description' => 'asasdasdasda abcd efg hij ',
+            'status' => '1',
+            'created_at'=>	now(),
+            'updated_at'=>now(),
+        ]);
+
+    DB::table('disciplines')->insert([
+            'name' => "science",
+            'status' => '1',
+            'created_at'=>	now(),
+            'updated_at'=>now(),
+        ]);
+
+    DB::table('disciplines')->insert([
+            'name' => "commerce",
+            'status' => '1',
+            'created_at'=>	now(),
+            'updated_at'=>now(),
+        ]);
+
+      DB::table('disciplines')->insert([
+            'name' => "arts",
+            'status' => '1',
+            'created_at'=>	now(),
+            'updated_at'=>now(),
+        ]);
 
         DB::table('users')->insert([
             'name' => "user",
             'email' => 'user'.'@gmail.com',
             'password' =>Hash::make('password'),
-//            'institution_id' => '2',
+            'institution_id' => '2',
             'email_verified_at' => now(),
             'created_at'=>	now(),
             'updated_at'=>now(),
@@ -37,7 +73,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' =>'admin'.'@gmail.com',
             'password' =>Hash::make('password'),
-//            'institution_id' => '1',
+            'institution_id' => '1',
             'email_verified_at' => now(),
             'created_at'=>	now(),
             'updated_at'=>now(),

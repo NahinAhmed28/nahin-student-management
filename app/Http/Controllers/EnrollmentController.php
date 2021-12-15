@@ -29,11 +29,18 @@ class EnrollmentController extends Controller
      */
     public function index()
     {
-        return view('institutions.enrollments.index');
+        $data = [
+            'enrollments' => $this->enrollmentModel->get(),
+        ];
+        return view('institutions.enrollments.index', $data);
     }
  public function stuIndex()
+
     {
-        return view('students.enrollments.index');
+        $data = [
+        'enrollments' => $this->enrollmentModel->get(),
+        ];
+        return view('students.enrollments.index', $data);
     }
 
     /**
@@ -47,6 +54,7 @@ class EnrollmentController extends Controller
             'institutions' => $this->instituteModel->get(),
         'disciplines' => $this->disciplineModel->get(),
         'courses' => $this->courseModel->get(),
+
         ];
 
         return view('students.enrollments.create', $data);
@@ -71,7 +79,7 @@ class EnrollmentController extends Controller
         ]);
 
 
-        $value->users()->attach($request->name);
+
 
 
 
@@ -125,10 +133,11 @@ class EnrollmentController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Enrollment  $enrollment
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Enrollment $enrollment)
+    public function destroy($id)
     {
-        //
+        Enrollment::destroy($id);
+        return redirect()->back()->with('flash_message', 'Contact deleted!');
     }
 }

@@ -29,9 +29,10 @@
                 <td>{{$course->credit}}</td>
                 <td>{{$course->institution->name}}</td>
                 <td>
-                    @foreach($courses as $course)
-                       {{$course->disciplines->pluck('name')->implode(',')}}
-                    @endforeach
+{{--                    @foreach($courses as $course)--}}
+{{--                       {{$course->disciplines->pluck('name')->implode(',')}}--}}
+{{--                    @endforeach--}}
+                {{$course->disciplines->pluck('name')->implode(',')}}
                 </td>
             </tr>
             @endforeach

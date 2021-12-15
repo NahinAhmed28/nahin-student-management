@@ -56,6 +56,7 @@ class CourseController extends Controller
         'courses' => $this->courseModel->get(),
         'institutions' => $this->instituteModel->get(),
         'disciplines' => $this->disciplineModel->get(),
+            ''
         ];
         return view('institutions.course.create',$data);
     }
@@ -89,10 +90,10 @@ class CourseController extends Controller
 
         if ($value)
         {
-            return redirect()->route('course.create');
+            return redirect()->route('course.index');
         }
         else {
-            return redirect()->route('course.index');
+            return redirect()->route('course.create');
 
         }
     }

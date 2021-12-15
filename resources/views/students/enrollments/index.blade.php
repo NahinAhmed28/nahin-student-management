@@ -10,22 +10,27 @@
     <table class="table table-hover table-striped">
         <thead class="badge-dark">
         <th>ID</th>
-        <th>Student Name</th>
-        <th>Student Email</th>
-        <th>Course Name</th>
-        <th>Course Credit</th>
-        <th>Course Price</th>
+        <th>Student<br> Name</th>
+        <th>Student<br> Email</th>
+        <th>Course<br> Name</th>
+        <th>Course <br>Credit</th>
+        <th>Course <br>Price</th>
+        <th>Course <br> Institution</th>
         <th></th>
         <th></th>
         </thead>
         <tbody>
-        {{--            @foreach($institutions as $institution)--}}
-        {{--                <tr>--}}
-        {{--                    <td>{{$institution->id}}</td>--}}
-        {{--                    <td>{{$institution->name}}</td>--}}
-        {{--                    <td>{{$institution->description}}</td>--}}
-        {{--                </tr>--}}
-        {{--            @endforeach--}}
+                    @foreach($enrollments as $enrollment)
+                        <tr>
+                            <td>{{$enrollment->id}}</td>
+                            <td>{{$enrollment->user->name}}</td>
+                            <td>{{$enrollment->user->email}}</td>
+                            <td> {{$enrollment->course->name}}</td>
+                            <td> {{$enrollment->course->credit}}</td>
+                            <td> {{$enrollment->course->price}}</td>
+                            <td> {{$enrollment->course->institution->name}}</td>
+                        </tr>
+                    @endforeach
         </tbody>
     </table>
 </div>

@@ -1,5 +1,11 @@
+<!doctype html>
+<html lang="en">
+
+<head>
 @include('students.layouts.common.head')
+</head>
 <body>
+
 
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         @include('students.layouts.common.header')
