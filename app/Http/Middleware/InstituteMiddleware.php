@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class AdminMiddleware
+class InstituteMiddleware
 {
     /**
      * Handle an incoming request.
@@ -18,12 +18,10 @@ class AdminMiddleware
     {
         if(auth()->check() && auth()->user()->role_id == 1)
         {
-
             return $next($request);
         }
         else {
-            return redirect('login');
+            return redirect()->route('login');
         }
-
     }
 }

@@ -1,6 +1,8 @@
 @include('students.layouts.common.head')
-<body>
-<div class="container">
+<body style="   background: url(https://i1.wp.com/blogs.perficient.com/files/abstract-background@1x.jpg.jpg?fit=1920%2C1280&ssl=1)
+                                    no-repeat center center fixed;
+                                    background-size: cover;" >
+<div class="container" style="margin-top: 20px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -55,7 +57,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
+                                                        <h3>password</h3>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}

@@ -22,7 +22,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 Route::middleware(['auth'])->group(function () {
+
 Route::resource('institution', InstitutionController::class);
 Route::resource('course', CourseController::class);
 Route::resource('discipline', DisciplineController::class);
@@ -31,9 +34,11 @@ Route::get('/institute/lists' ,  [InstitutionController::class, 'list'])->name('
 Route::get('/institute/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
 Route::get('/institute/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
 
+});
 
+
+Route::middleware(['auth'])->group(function () {
 Route::resource('student', StudentController::class);
-
 Route::get('/students/courses' ,  [CourseController::class, 'stuIndex'])->name('student.course');
 Route::get('/students/institutions' ,  [InstitutionController::class, 'stuIndex'])->name('student.institution');
 Route::get('/students/disciplines' ,  [DisciplineController::class, 'stuIndex'])->name('student.discipline');

@@ -1,7 +1,9 @@
 @include('students.layouts.common.head')
-<body>
+<body style="background: url(https://i1.wp.com/blogs.perficient.com/files/abstract-background@1x.jpg.jpg?fit=1920%2C1280&ssl=1)
+              no-repeat center center fixed;
+              background-size: cover;">
 
-<div class="container">
+<div class="container" style="margin-top: 20px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

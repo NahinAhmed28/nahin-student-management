@@ -50,8 +50,9 @@ class User extends Authenticatable
     ];
     public function roles():BelongsToMany
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class)->withPivot('user_id ','role_id ')->withTimestamps();
     }
+
     public function institution(): BelongsTo
     {
         return $this->belongsTo(Institution::class);
