@@ -13,8 +13,12 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-
+    const Role = [
+        'Admin' =>  1,
+        'User' => 2
+    ];
     protected $guarded = ['id'];
+
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -62,4 +66,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Enrollment::class);
     }
+
+
 }

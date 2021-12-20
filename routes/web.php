@@ -5,6 +5,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DisciplineController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\Institution\LoginController as NewLoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,12 +25,12 @@ Route::get('/', function () {
 });
 
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth' , 'institute'])->group(function () {
 
-Route::resource('institution/index', InstitutionController::class);
-Route::resource('institution/course', CourseController::class);
-Route::resource('institution/discipline', DisciplineController::class);
-Route::resource('institution/enrollment', EnrollmentController::class);
+Route::resource('/institution', InstitutionController::class);
+Route::resource('/course', CourseController::class);
+Route::resource('/discipline', DisciplineController::class);
+Route::resource('/enrollment', EnrollmentController::class);
 Route::get('/institution/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
 Route::get('/institution/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
 Route::get('/institution/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
@@ -51,7 +52,11 @@ Route::get('/students/user' ,  [StudentController::class, 'stuInfo'])->name('stu
 
 
 
+
+
 Auth::routes();
+Route::get('/admin/login' ,  [NewLoginController::class, 'login'])->name('institution.login');
+
 Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

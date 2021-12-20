@@ -28,6 +28,6 @@ class HomeController extends Controller
 
     public function institution()
     {
-       return redirect()->route('institution.index');
+//       return redirect()->route('institution.index');
     }
 }
