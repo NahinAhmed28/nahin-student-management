@@ -26,13 +26,13 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
 
-Route::resource('institution', InstitutionController::class);
-Route::resource('course', CourseController::class);
-Route::resource('discipline', DisciplineController::class);
-Route::resource('enrollment', EnrollmentController::class);
-Route::get('/institute/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
-Route::get('/institute/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
-Route::get('/institute/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
+Route::resource('institution/index', InstitutionController::class);
+Route::resource('institution/course', CourseController::class);
+Route::resource('institution/discipline', DisciplineController::class);
+Route::resource('institution/enrollment', EnrollmentController::class);
+Route::get('/institution/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
+Route::get('/institution/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
+Route::get('/institution/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
 
 });
 
