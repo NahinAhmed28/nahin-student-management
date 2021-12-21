@@ -96,7 +96,12 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    <a href="{{route('institution.index')}}"> Go to project</a>
+                                    <a href="{{route('institution.index')}}"> Go to student login</a>
+                                </div>
+                            </div>
+                            <div class="ml-12">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    <a href="{{route('institution.login')}}"> Go to institution login</a>
                                 </div>
                             </div>
                         </div>

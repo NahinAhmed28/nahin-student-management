@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Institution;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class InstitutionController extends Controller
 {
     public $instituteModel;
-    public function __construct(Institution $institution)
+    public $userModel;
+    public function __construct(Institution $institution, User $user)
     {
         $this->instituteModel= $institution;
+        $this->userModel= $user;
     }
     /**
      * Display a listing of the resource.
@@ -88,7 +91,8 @@ class InstitutionController extends Controller
 
     public function user()
     {
-        return view('institutions.user');
+        $user = auth()->user();
+        return view('institutions.user', compact('user'));
     }
 
     public function notification()

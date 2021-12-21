@@ -22,7 +22,7 @@
                                     <div class="col-md-3 px-1">
                                         <div class="form-group">
                                             <label>Username</label>
-                                            <input type="text" class="form-control" placeholder="Username" value="michael23">
+                                            <input type="text" class="form-control" placeholder="Username" value=" {{ $user->name }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4 pl-1">
@@ -36,13 +36,13 @@
                                     <div class="col-md-6 pr-1">
                                         <div class="form-group">
                                             <label>First Name</label>
-                                            <input type="text" class="form-control" placeholder="Company" value="Mike">
+                                            <input type="text" class="form-control" placeholder="Company" value=" {{$user->name}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6 pl-1">
                                         <div class="form-group">
                                             <label>Last Name</label>
-                                            <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
+                                            <input type="text" class="form-control" placeholder="Last Name" value="{{$user->name}}">
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Address</label>
-                                            <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
+                                            <input type="text" class="form-control" placeholder="Home Address" value="Mirpur,Dhaka">
                                         </div>
                                     </div>
                                 </div>
@@ -58,13 +58,13 @@
                                     <div class="col-md-4 pr-1">
                                         <div class="form-group">
                                             <label>City</label>
-                                            <input type="text" class="form-control" placeholder="City" value="Mike">
+                                            <input type="text" class="form-control" placeholder="City" value="{{$user->name}}">
                                         </div>
                                     </div>
                                     <div class="col-md-4 px-1">
                                         <div class="form-group">
                                             <label>Country</label>
-                                            <input type="text" class="form-control" placeholder="Country" value="Andrew">
+                                            <input type="text" class="form-control" placeholder="Country" value="Bangladesh">
                                         </div>
                                     </div>
                                     <div class="col-md-4 pl-1">
@@ -78,11 +78,11 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>About Me</label>
-                                            <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                                            <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">institution manager</textarea>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+{{--                                <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>--}}
                                 <div class="clearfix"></div>
                             </form>
                         </div>
@@ -96,17 +96,15 @@
                         <div class="card-body">
                             <div class="author">
                                 <a href="#">
-                                    <img class="avatar border-gray" src="{{asset('backend/assets/img/faces/face-3.jpg')}}" alt="...">
-                                    <h5 class="title">Mike Andrew</h5>
+                                    <img class="avatar border-gray" src="https://cdn3.vectorstock.com/i/1000x1000/30/97/flat-business-man-user-profile-avatar-icon-vector-4333097.jpg" alt="...">
+                                    <h5 class="title">Name: {{$user->name}}</h5>
                                 </a>
                                 <p class="description">
-                                    michael24
+                                  Institution:  {{$user->institution->name}}
                                 </p>
                             </div>
                             <p class="description text-center">
-                                "Lamborghini Mercy
-                                <br> Your chick she so thirsty
-                                <br> I'm in that two seat Lambo"
+                               Institution Manager
                             </p>
                         </div>
                         <hr>

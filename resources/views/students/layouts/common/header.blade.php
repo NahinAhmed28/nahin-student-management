@@ -64,8 +64,8 @@
                         <div class="widget-content-left">
                             <div class="btn-group">
                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                    <img width="42" class="rounded-circle" src="{{asset('frontend/assets/images/avatars/1.jpg')}}" alt="">
-                                    <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                    <img width="42" class="rounded-circle" src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="">
+{{--                                    <i class="fa fa-angle-down ml-2 opacity-8"></i>--}}
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
                                    <a href="{{route('student.user')}}" style="text-decoration: none"> <button type="button" tabindex="0" class="dropdown-item">User Account</button></a>
@@ -77,14 +77,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="widget-content-left  ml-3 header-user-info">
-                            <div class="widget-heading">
-                                Alina Mclourd
-                            </div>
-                            <div class="widget-subheading">
-                                VP People Manager
-                            </div>
-                        </div>
+
+{{--                        <div class="widget-content-left  ml-3 header-user-info">--}}
+{{--                            <div class="widget-heading">--}}
+{{--                              {{$user->name}}--}}
+{{--                            </div>--}}
+{{--                            <div class="widget-subheading">--}}
+{{--                                {{$user->institution->name}}--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="widget-content-right header-user-info ml-3">
                             <a class="nav-link" href="{{route('logout')}}">
                                 <span class="no-icon">Log out</span>

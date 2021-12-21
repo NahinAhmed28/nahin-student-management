@@ -39,6 +39,10 @@
                         <i class="metismenu-icon pe-7s-rocket"></i>
                         Dashboard
                     </a>
+                    <a href="{{route('student.user')}}">
+                        <i class="metismenu-icon pe-7s-rocket"></i>
+                        User Info
+                    </a>
                 </li>
                 <li class="app-sidebar__heading">Courses</li>
                 <li>

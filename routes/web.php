@@ -31,9 +31,9 @@ Route::resource('/institution', InstitutionController::class);
 Route::resource('/course', CourseController::class);
 Route::resource('/discipline', DisciplineController::class);
 Route::resource('/enrollment', EnrollmentController::class);
-Route::get('/institution/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
-Route::get('/institution/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
-Route::get('/institution/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
+Route::get('/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
+Route::get('/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
+Route::get('/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
 
 });
 

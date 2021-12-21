@@ -14,11 +14,13 @@ class StudentController extends Controller
      */
     public function index()
     {
+
         return view('students.index');
     }
  public function stuInfo()
     {
-        return view('students.user');
+        $user = auth()->user();
+        return view('students.user',compact('user'));
     }
 
     /**

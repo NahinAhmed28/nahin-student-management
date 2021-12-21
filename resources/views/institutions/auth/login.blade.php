@@ -1,5 +1,5 @@
 @include('students.layouts.common.head')
-<body style="   background: url(https://i1.wp.com/blogs.perficient.com/files/abstract-background@1x.jpg.jpg?fit=1920%2C1280&ssl=1)
+<body style="   background: url(https://as2.ftcdn.net/v2/jpg/02/16/47/33/1000_F_216473351_FCLq1pZQOBFrgcyPBphKvBd8Z5wjD1dI.jpg)
                                     no-repeat center center fixed;
                                     background-size: cover;" >
 <div class="container" style="margin-top: 20px">
