@@ -11,7 +11,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <input type="hidden" name="type" value="User">
+                        <input type="hidden" name="type" value="Student">
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
                             <div class="col-md-6">
@@ -64,6 +64,7 @@
                         </div>
                     </form>
                 </div>
+                <h4 class="text-center m-3" style="font-family: 'Times New Roman', serif;">Dont Have An Id ?  <a href="{{route('register')}}"> Register Now ! </a> </h4>
             </div>
         </div>
     </div>

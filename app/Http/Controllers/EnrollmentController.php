@@ -7,6 +7,7 @@ use App\Models\Discipline;
 use App\Models\Enrollment;
 use App\Models\Institution;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class EnrollmentController extends Controller
@@ -73,17 +74,14 @@ class EnrollmentController extends Controller
 
         $value= $this->enrollmentModel->create([
 
-            'user_id'=> 1,
+            'user_id'=> Auth::user()->id,
             'course_id'=> $request->course_id
 
         ]);
 
-
-
-
-
-
         DB::commit();
+
+//        dd($value);
 
         if ($value)
         {

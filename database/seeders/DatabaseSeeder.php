@@ -17,11 +17,11 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         DB::table('roles')->insert([
-            'title' => 'Admin'
+            'title' => 'Institution'
         ]);
 
         DB::table('roles')->insert([
-            'title' => 'User'
+            'title' => 'Student'
         ]);
         DB::table('institutions')->insert([
             'name' => "shaheen",
@@ -61,19 +61,21 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'admin',
-            'email' =>'admin'.'@gmail.com',
+            'name' => 'institution admin',
+            'email' =>'institution'.'@gmail.com',
             'password' =>Hash::make('password'),
             'institution_id' => '1',
+            'access' => '1',
             'email_verified_at' => now(),
             'created_at'=>	now(),
             'updated_at'=>now(),
         ]);
         DB::table('users')->insert([
-            'name' => "user",
-            'email' => 'user'.'@gmail.com',
+            'name' => "student user",
+            'email' => 'student'.'@gmail.com',
             'password' =>Hash::make('password'),
             'institution_id' => '2',
+            'access' => '0',
             'email_verified_at' => now(),
             'created_at'=>	now(),
             'updated_at'=>now(),

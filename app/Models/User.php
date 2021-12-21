@@ -14,8 +14,8 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     const Role = [
-        'Admin' =>  1,
-        'User' => 2
+        'Institution' =>  1,
+        'Student' => 2
     ];
     protected $guarded = ['id'];
 
@@ -31,7 +31,7 @@ class User extends Authenticatable
         'email',
         'password',
         'institution_id',
-        'role_id',
+        'role_id', 'is_admin'
     ];
 
     /**

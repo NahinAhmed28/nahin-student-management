@@ -7,12 +7,6 @@
 
         <form action="{{route('enrollment.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="title" name="name" placeholder="Enter name"  required>
-                </div>
-            </div>
 
             <div class="form-row">
                 <div class="col-md-6 mb-3">

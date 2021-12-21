@@ -8,49 +8,32 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Edit Profile</h4>
+                            <h4 class="card-title"> Profile</h4>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-5 pr-1">
-                                        <div class="form-group">
-                                            <label>Company (disabled)</label>
-                                            <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-                                        </div>
-                                    </div>
                                     <div class="col-md-3 px-1">
                                         <div class="form-group">
                                             <label>Username</label>
-                                            <input type="text" class="form-control" placeholder="Username" value=" {{ $user->name }}">
+                                            {{$user->name}}
+{{--                                            <input type="text" class="form-control" placeholder="Username" value=" {{ $user->name }}">--}}
                                         </div>
                                     </div>
                                     <div class="col-md-4 pl-1">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" placeholder="Email">
+                                            {{$user->email}}
+{{--                                            <input type="email" class="form-control" placeholder="{{$user->email}}" >--}}
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 pr-1">
-                                        <div class="form-group">
-                                            <label>First Name</label>
-                                            <input type="text" class="form-control" placeholder="Company" value=" {{$user->name}}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 pl-1">
-                                        <div class="form-group">
-                                            <label>Last Name</label>
-                                            <input type="text" class="form-control" placeholder="Last Name" value="{{$user->name}}">
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Address</label>
-                                            <input type="text" class="form-control" placeholder="Home Address" value="Mirpur,Dhaka">
+{{--                                            <input type="text" class="form-control" placeholder="Home Address" value="Mirpur,Dhaka">--}}
                                         </div>
                                     </div>
                                 </div>
@@ -58,19 +41,15 @@
                                     <div class="col-md-4 pr-1">
                                         <div class="form-group">
                                             <label>City</label>
-                                            <input type="text" class="form-control" placeholder="City" value="{{$user->name}}">
+                                            Dhaka
+{{--                                            <input type="text" class="form-control" placeholder="City" value="{{$user->name}}">--}}
                                         </div>
                                     </div>
                                     <div class="col-md-4 px-1">
                                         <div class="form-group">
                                             <label>Country</label>
-                                            <input type="text" class="form-control" placeholder="Country" value="Bangladesh">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 pl-1">
-                                        <div class="form-group">
-                                            <label>Postal Code</label>
-                                            <input type="number" class="form-control" placeholder="ZIP Code">
+                                            Bangladesh
+{{--                                            <input type="text" class="form-control" placeholder="Country" value="Bangladesh">--}}
                                         </div>
                                     </div>
                                 </div>

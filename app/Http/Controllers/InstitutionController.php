@@ -13,6 +13,7 @@ class InstitutionController extends Controller
     public $userModel;
     public function __construct(Institution $institution, User $user)
     {
+
         $this->instituteModel= $institution;
         $this->userModel= $user;
     }

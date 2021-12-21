@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 
-Route::middleware(['auth' , 'institute'])->group(function () {
+Route::middleware(['auth','institute' ])->group(function () {
 
 Route::resource('/institution', InstitutionController::class);
 Route::resource('/course', CourseController::class);
@@ -48,9 +48,6 @@ Route::get('/students/user' ,  [StudentController::class, 'stuInfo'])->name('stu
 
 
 });
-
-
-
 
 
 

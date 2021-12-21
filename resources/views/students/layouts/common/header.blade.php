@@ -78,6 +78,10 @@
                             </div>
                         </div>
 
+                        <a class="nav-link" href="{{route('student.user')}}">
+                            <span class="no-icon">Account</span>
+                        </a>
+
 {{--                        <div class="widget-content-left  ml-3 header-user-info">--}}
 {{--                            <div class="widget-heading">--}}
 {{--                              {{$user->name}}--}}

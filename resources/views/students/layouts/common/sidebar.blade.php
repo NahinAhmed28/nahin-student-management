@@ -33,15 +33,18 @@
     <div class="scrollbar-sidebar">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
-                <li class="app-sidebar__heading">Dashboards</li>
+                <li class="app-sidebar__heading">Enrollment</li>
                 <li>
-                    <a href="{{route('student.index')}}">
-                        <i class="metismenu-icon pe-7s-rocket"></i>
+                    <a href="{{route('student.index')}}" class="mm-active">
+                        <i class="metismenu-icon pe-7s-display2"></i>
                         Dashboard
                     </a>
-                    <a href="{{route('student.user')}}">
-                        <i class="metismenu-icon pe-7s-rocket"></i>
-                        User Info
+                </li>
+
+                <li>
+                    <a href="{{route('student.user')}}" class="mm-active">
+                        <i class="metismenu-icon pe-7s-display2"></i>
+                        user info
                     </a>
                 </li>
                 <li class="app-sidebar__heading">Courses</li>

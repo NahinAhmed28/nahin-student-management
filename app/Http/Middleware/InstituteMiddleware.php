@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class InstituteMiddleware
 {
@@ -17,12 +18,13 @@ class InstituteMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() &&  auth()->user()->roles()->where('role_id' , User::Role['Admin']))
+
+        if(auth()->check() &&  auth()->user()->access == 1)
         {
             return $next($request);
         }
         else {
-            return redirect()->route('/admin/login');
+            return redirect()->route('student.user');
         }
     }
 }

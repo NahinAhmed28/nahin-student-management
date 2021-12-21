@@ -47,18 +47,18 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
         if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))) {
-            if($request->type == "Admin" && auth()->user()->roles()->where('role_id' , User::Role['Admin']) ) {
-                Session::put('type' , "Admin");
+            if($request->type == "Institution" && auth()->user()->roles()->where('role_id' , User::Role['Institution']) ) {
+                Session::put('type' , "Institution");
                 return redirect()->route('institution.index');
             }
-            elseif ($request->type == "User" && auth()->user()->roles()->where('role_id' , User::Role['User'])) {
-                Session::put('type' , "User");
+            elseif ($request->type == "Student" && auth()->user()->roles()->where('role_id' , User::Role['Student'])) {
+                Session::put('type' , "Student");
                 return redirect()->route('student.index');
             }
         }
         else
         {
-            if($request->type == "Admin"){
+            if($request->type == "Institution"){
                 return redirect()->route('institution.login')->withErrors('Email-Address And Password Are Wrong.');
             }
             return redirect()->route('login')->withErrors('Email-Address And Password Are Wrong.');
@@ -67,7 +67,7 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        if(Session::get('type') == "Admin")
+        if(Session::get('type') == "Institution")
         {
             Auth::logout();
             return redirect('/admin/login');
