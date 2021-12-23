@@ -32,6 +32,9 @@ Route::resource('/institution', InstitutionController::class);
 Route::resource('/course', CourseController::class);
 Route::resource('/discipline', DisciplineController::class);
 
+//Route::resource('/user', UserController::class);
+    Route::get('/test/user' ,  [UserController::class, 'index'])->name('user.home');
+
 
 Route::get('/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
 Route::get('/enrollment/index' ,  [EnrollmentController::class, 'insIndex'])->name('institution.enrollment');
