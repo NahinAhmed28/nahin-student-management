@@ -30,8 +30,9 @@ Route::middleware(['auth','institute' ])->group(function () {
 Route::resource('/institution', InstitutionController::class);
 Route::resource('/course', CourseController::class);
 Route::resource('/discipline', DisciplineController::class);
-Route::resource('/enrollment', EnrollmentController::class);
+
 Route::get('/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
+Route::get('/enrollment/index' ,  [EnrollmentController::class, 'insIndex'])->name('institution.enrollment');
 Route::get('/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
 Route::get('/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
 
@@ -43,6 +44,7 @@ Route::resource('student', StudentController::class);
 Route::get('/students/courses' ,  [CourseController::class, 'stuIndex'])->name('student.course');
 Route::get('/students/institutions' ,  [InstitutionController::class, 'stuIndex'])->name('student.institution');
 Route::get('/students/disciplines' ,  [DisciplineController::class, 'stuIndex'])->name('student.discipline');
+Route::resource('/enrollment', EnrollmentController::class);
 Route::get('/students/enrollment' ,  [EnrollmentController::class, 'stuIndex'])->name('student.enrollment');
 Route::get('/students/user' ,  [StudentController::class, 'stuInfo'])->name('student.user');
 

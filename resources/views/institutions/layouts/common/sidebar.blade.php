@@ -6,7 +6,7 @@ Tip 2: you can also add an image using data-image tag
 -->
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="https://www.facebook.com/" class="simple-text">
+            <a href="{{route('institution.list')}}" class="simple-text">
                 Institution Panel
             </a>
         </div>
@@ -24,7 +24,7 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{route('enrollment.index')}}">
+                <a class="nav-link" href="{{route('institution.enrollment')}}">
                     <i class="nc-icon nc-notes"></i>
                     <p>Enrollment List</p>
                 </a>
@@ -54,6 +54,12 @@ Tip 2: you can also add an image using data-image tag
                 <a class="nav-link" href="{{route('institution.notification')}}">
                     <i class="nc-icon nc-bell-55"></i>
                     <p>Notifications</p>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="{{route('institution.notification')}}">
+                    <i class="nc-icon nc-satisfied"></i>
+                    <p>Registered User</p>
                 </a>
             </li>
         </ul>

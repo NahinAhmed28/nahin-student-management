@@ -2,31 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Institution;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class StudentController extends Controller
+class UserController extends Controller
 {
-    public $instituteModel;
-    public function __construct(Institution $institution){
-        $this->instituteModel= $institution;
-    }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $institutions = $this->instituteModel->get();
-        return view('students.index',compact('institutions'));
-    }
- public function stuInfo()
-    {
-
-        $user = auth()->user();
-        return view('students.user',compact('user'));
+        //
     }
 
     /**
@@ -94,6 +81,4 @@ class StudentController extends Controller
     {
         //
     }
-
-
 }

@@ -31,7 +31,7 @@ class User extends Authenticatable
         'email',
         'password',
         'institution_id',
-        'role_id', 'is_admin'
+        'role_id', 'is_institution'
     ];
 
     /**

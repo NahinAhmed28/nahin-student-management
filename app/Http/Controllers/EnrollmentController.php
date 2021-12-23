@@ -33,15 +33,15 @@ class EnrollmentController extends Controller
         $data = [
             'enrollments' => $this->enrollmentModel->get(),
         ];
-        return view('institutions.enrollments.index', $data);
+        return view('students.enrollments.index', $data);
     }
- public function stuIndex()
+ public function insIndex()
 
     {
         $data = [
         'enrollments' => $this->enrollmentModel->get(),
         ];
-        return view('students.enrollments.index', $data);
+        return view('institutions.enrollments.index', $data);
     }
 
     /**
@@ -50,6 +50,18 @@ class EnrollmentController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function create()
+    {
+        $data =[
+            'institutions' => $this->instituteModel->get(),
+        'disciplines' => $this->disciplineModel->get(),
+        'courses' => $this->courseModel->get(),
+            'enrollments' => $this->enrollmentModel->get(),
+
+        ];
+
+        return view('students.enrollments.create', $data);
+    }
+    public function stuEnroll()
     {
         $data =[
             'institutions' => $this->instituteModel->get(),
@@ -136,6 +148,6 @@ class EnrollmentController extends Controller
     public function destroy($id)
     {
         Enrollment::destroy($id);
-        return redirect()->back()->with('flash_message', 'Contact deleted!');
+        return redirect()->back();
     }
 }

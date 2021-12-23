@@ -38,6 +38,6 @@
         <script>
             document.write(new Date().getFullYear())
         </script>
-        <a href="http://www.facebook.com">Nahin Ahmed</a>, made with love
+        <a href="http://www.facebook.com">Nahin Ahmed</a>, made with love and care
     </p>
 </div>

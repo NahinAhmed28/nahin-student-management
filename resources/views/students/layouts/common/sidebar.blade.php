@@ -36,14 +36,14 @@
                 <li class="app-sidebar__heading">Enrollment</li>
                 <li>
                     <a href="{{route('student.index')}}" class="mm-active">
-                        <i class="metismenu-icon pe-7s-display2"></i>
+                        <i class="metismenu-icon pe-7s-rocket"></i>
                         Dashboard
                     </a>
                 </li>
 
                 <li>
                     <a href="{{route('student.user')}}" class="mm-active">
-                        <i class="metismenu-icon pe-7s-display2"></i>
+                        <i class="metismenu-icon pe-7s-eyedropper"></i>
                         user info
                     </a>
                 </li>
@@ -94,7 +94,7 @@
                 </li>
                 <li class="app-sidebar__heading">Enrollment</li>
                 <li>
-                    <a href="{{route('student.enrollment')}}" class="mm-active">
+                    <a href="{{route('enrollment.index')}}" class="mm-active">
                         <i class="metismenu-icon pe-7s-display2"></i>
                         Enrolled courses
                     </a>

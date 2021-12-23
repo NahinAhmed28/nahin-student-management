@@ -19,12 +19,12 @@ class InstituteMiddleware
     public function handle(Request $request, Closure $next)
     {
 
-        if(auth()->check() &&  auth()->user()->access == 1)
+        if(auth()->check() &&  auth()->user()->is_institution == 1)
         {
             return $next($request);
         }
         else {
-            return redirect()->route('student.user');
+            return redirect()->route('student.index');
         }
     }
 }

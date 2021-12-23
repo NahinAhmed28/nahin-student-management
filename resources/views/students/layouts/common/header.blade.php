@@ -1,6 +1,8 @@
 <div class="app-header header-shadow">
     <div class="app-header__logo">
-{{--        <div class="logo-src"></div> --}}{{--   header logo--}}
+        <a href="{{route('student.index')}}">
+        <img class='logo-src' src="https://www.seekpng.com/png/detail/118-1188729_students-header-student.png" style="width: 200px; height:50px " alt="">
+        </a>
         <div class="header__pane ml-auto">
             <div>
                 <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -39,21 +41,21 @@
             </div>
             <ul class="header-menu nav">
                 <li class="nav-item">
-                    <a href="javascript:void(0);" class="nav-link">
+                    <a href="{{route('student.index')}}" class="nav-link">
                         <i class="nav-link-icon fa fa-database"> </i>
                         Statistics
                     </a>
                 </li>
                 <li class="btn-group nav-item">
-                    <a href="javascript:void(0);" class="nav-link">
+                    <a href="{{route('enrollment.create')}}" class="nav-link">
                         <i class="nav-link-icon fa fa-edit"></i>
-                        Projects
+                        Enroll
                     </a>
                 </li>
                 <li class="dropdown nav-item">
-                    <a href="javascript:void(0);" class="nav-link">
+                    <a href="{{route('institution.list')}}" class="nav-link">
                         <i class="nav-link-icon fa fa-cog"></i>
-                        Settings
+                        Institution Panel
                     </a>
                 </li>
             </ul>        </div>
@@ -81,6 +83,9 @@
                         <a class="nav-link" href="{{route('student.user')}}">
                             <span class="no-icon">Account</span>
                         </a>
+                        <a class="nav-link" href="{{route('logout')}}">
+                            <span class="no-icon">Log out</span>
+                        </a>
 
 {{--                        <div class="widget-content-left  ml-3 header-user-info">--}}
 {{--                            <div class="widget-heading">--}}
@@ -90,13 +95,10 @@
 {{--                                {{$user->institution->name}}--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
-                        <div class="widget-content-right header-user-info ml-3">
-                            <a class="nav-link" href="{{route('logout')}}">
-                                <span class="no-icon">Log out</span>
-                            </a>
-                        </div>
+
                     </div>
                 </div>
-            </div>        </div>
+            </div>
+        </div>
     </div>
 </div>
