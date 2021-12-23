@@ -6,6 +6,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DisciplineController;
 use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\Institution\LoginController as NewLoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,7 @@ Route::resource('/institution', InstitutionController::class);
 Route::resource('/course', CourseController::class);
 Route::resource('/discipline', DisciplineController::class);
 
+
 Route::get('/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
 Route::get('/enrollment/index' ,  [EnrollmentController::class, 'insIndex'])->name('institution.enrollment');
 Route::get('/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
@@ -38,6 +40,7 @@ Route::get('/notification' ,  [InstitutionController::class, 'notification'])->n
 
 });
 
+Route::resource('/all', UserController::class);
 
 Route::middleware(['auth'])->group(function () {
 Route::resource('student', StudentController::class);
@@ -47,7 +50,6 @@ Route::get('/students/disciplines' ,  [DisciplineController::class, 'stuIndex'])
 Route::resource('/enrollment', EnrollmentController::class);
 Route::get('/students/enrollment' ,  [EnrollmentController::class, 'stuIndex'])->name('student.enrollment');
 Route::get('/students/user' ,  [StudentController::class, 'stuInfo'])->name('student.user');
-
 
 });
 
