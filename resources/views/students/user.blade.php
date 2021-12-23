@@ -38,17 +38,15 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Address</label>
-                                            {{--                                            <input type="text" class="form-control" placeholder="Home Address" value="Mirpur,Dhaka">--}}
+                                            <label>Address:</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 pr-1">
                                         <div class="form-group">
-                                            <label>City</label>
+                                            <label>City:</label>
                                             Dhaka
-                                            {{--                                            <input type="text" class="form-control" placeholder="City" value="{{$user->name}}">--}}
                                         </div>
                                     </div>
                                     <div class="col-md-4 px-1">

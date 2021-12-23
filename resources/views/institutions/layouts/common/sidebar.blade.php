@@ -57,7 +57,7 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
             <li>
-                <a class="nav-link" href="{{route('user.home')}}">
+                <a class="nav-link" href="{{route('user.index')}}">
                     <i class="nc-icon nc-satisfied"></i>
                     <p>Registered User</p>
                 </a>

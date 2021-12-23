@@ -32,18 +32,18 @@ Route::resource('/institution', InstitutionController::class);
 Route::resource('/course', CourseController::class);
 Route::resource('/discipline', DisciplineController::class);
 
-//Route::resource('/user', UserController::class);
-    Route::get('/test/user' ,  [UserController::class, 'index'])->name('user.home');
+Route::resource('/all/user', UserController::class);
+
 
 
 Route::get('/lists' ,  [InstitutionController::class, 'list'])->name('institution.list');
 Route::get('/enrollment/index' ,  [EnrollmentController::class, 'insIndex'])->name('institution.enrollment');
-Route::get('/user' ,  [InstitutionController::class, 'user'])->name('institution.user');
+Route::get('/institution_user' ,  [InstitutionController::class, 'user'])->name('institution.user');
 Route::get('/notification' ,  [InstitutionController::class, 'notification'])->name('institution.notification');
 
 });
 
-Route::resource('/all', UserController::class);
+
 
 Route::middleware(['auth'])->group(function () {
 Route::resource('student', StudentController::class);

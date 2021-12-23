@@ -13,18 +13,16 @@
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-3 px-1">
+                                    <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Username</label>
                                             {{$user->name}}
-{{--                                            <input type="text" class="form-control" placeholder="Username" value=" {{ $user->name }}">--}}
                                         </div>
                                     </div>
-                                    <div class="col-md-4 pl-1">
+                                    <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Email address</label>
                                             {{$user->email}}
-{{--                                            <input type="email" class="form-control" placeholder="{{$user->email}}" >--}}
                                         </div>
                                     </div>
                                 </div>
@@ -38,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4 pr-1">
+                                    <div class="col-md-4 px-1">
                                         <div class="form-group">
                                             <label>City</label>
                                             Dhaka
