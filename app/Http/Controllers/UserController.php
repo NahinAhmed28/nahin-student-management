@@ -2,18 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    /**
+    public $userModel;
+    public $roleModel;
+    public function __construct(User $user, Role $role){
+        $this->middleware('auth');
+        $this->userModel = $user;
+        $this->roleModel = $role;
+    }
+        /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
-        return view('users.index');
+        $users = User::all();
+        return view('users.index' , compact('users') );
+
     }
 
     /**
@@ -52,11 +63,12 @@ class UserController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('users.edit', compact('user') );
     }
 
     /**
@@ -64,11 +76,16 @@ class UserController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, $id)
     {
-        //
+        $userdata= $this->userModel->findOrFail($id);
+        $userdata->name =  $request->name;
+        $userdata->email =  $request->email;
+        $userdata->update();
+
+        return back();
     }
 
     /**
