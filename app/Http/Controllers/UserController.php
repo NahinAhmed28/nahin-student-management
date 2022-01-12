@@ -80,6 +80,9 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+
+
         $userdata= $this->userModel->findOrFail($id);
         $userdata->name =  $request->name;
         $userdata->email =  $request->email;
