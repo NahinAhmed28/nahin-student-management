@@ -1,14 +1,25 @@
 # Nahin Student Management
 
-Nahin Student Management is a Laravel-based student management application. The project is focused on managing student-related records and presenting administrative screens for education workflows.
+Nahin Student Management is a Laravel-based student management application.
 
-## Project Details
+## Features
 
-- Repository: `NahinAhmed28/nahin-student-management`
-- Default branch: `master`
-- Visibility: public
-- Project type: Laravel management system
-- Main focus: student record management
+- Student record management workflow
+- Admin-ready screens for education data
+- Database-backed student information
+- Screenshot-supported documentation
+
+## Modules
+
+- Student module: student profiles, records, and actions
+- Admin module: management screens and protected routes
+- Data module: models, migrations, and database persistence
+- Reporting module: filters, summaries, and exports when implemented
+- Presentation module: Blade/Vite views and UI assets
+
+## System Architecture
+
+The system follows Laravel MVC architecture. Routes map requests to controllers, controllers validate and process student workflows, models persist records, and views render management screens. Optional reporting and notification services can be added through Laravel service classes.
 
 ## Screenshot
 
@@ -25,10 +36,4 @@ php artisan key:generate
 npm install
 npm run dev
 php artisan serve
-```
-
-Configure the database in `.env`, then run migrations if included.
-
-```bash
-php artisan migrate
 ```
